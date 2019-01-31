@@ -30,17 +30,21 @@
 <div>
   <div class="container">
 
-    <div class="row mt-5 justify-content-center ">
+    <h1 class="text-center mt-5">Artikel Budaya </h1>
+    <div class="row  justify-content-center ">
       @foreach ($blog as $blog)
-      <div class="col-md-3 " >
+      <div class="col-md-4 mt-5 " >
         <div class="card">
+            <a href="{{route('details',$blog->slug)}}" class=" text-dark">
+          <img class="card-img-top" src="/storage/img/{{$blog->img}}" alt="" style="width:100%;height:200px;">
+         </a>
           <div class="card-head">
-            <h2 class="text-center">
+            <h2 class="text-center mt-4">
             <a href="{{route('details',$blog->slug)}}" class=" text-dark">{{$blog->title}}</a>
             </h2>
           </div>
           <div class="card-body">
-          <p>{{$blog->isi}}</p>
+
           </div>
         </div>
       </div>

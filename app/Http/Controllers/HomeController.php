@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blog = Blog::all();
+        $blog = Blog::paginate(6);
         return view('home',['blog'=>$blog]);
     }
 }

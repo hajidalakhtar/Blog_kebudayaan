@@ -53,7 +53,7 @@
 <body style="font-family: 'Comfortaa', cursive;">
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel  " style="z-index: 1000 ;box-shadow:1px 3px 50px black;background-color:#ceae8a">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel  " style="z-index: 1000 ;box-shadow:1px 1px 50px black;background-color:#ceae8a">
             <div class="container">
                 <a class="navbar-brand text-white" href="{{ url('/') }}" style="font-family: 'Anton', sans-serif;">
                     BudayaIndonesia

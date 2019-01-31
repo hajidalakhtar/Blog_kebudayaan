@@ -41,7 +41,7 @@ class BlogController extends Controller
         $blog->title = $request->title;
         $blog->slug = Str::slug($request->title);
         $blog->isi = $request->isi;
-        $image = $request->image->store('public/place');
+        $image = $request->image->store('public/img');
         $blog->img = basename($image);
         $blog->save();
         // return (['pesan'=>'bisa'] );
