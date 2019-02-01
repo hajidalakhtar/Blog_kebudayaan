@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Blog;
+use Bitly;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -37,14 +38,18 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
+        
         $blog = new Blog;
         $blog->title = $request->title;
-        $blog->slug = Str::slug($request->title);
+        $slug =  Str::slug($request->title);
+        $blog->slug =  $slug ;
         $blog->isi = $request->isi;
+        $url = app('bitly')->getUrl('http://127.0.0.1:8000/blog/details/'.$slug); // http://bit.ly/nHcn3
+         $blog->bitly = $url;
         $image = $request->image->store('public/img');
         $blog->img = basename($image);
         $blog->save();
-        // return (['pesan'=>'bisa'] );
         return redirect('admin/home');
    //
     }
@@ -57,10 +62,10 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
+        $allBlog = Blog::paginate(3);
         $blog = Blog::where('slug',$slug)->first();
-        // dd($blog);
-        return view('details',['blog' => $blog]);
-    }
+        return view('details',['blog' => $blog,'allBlog'=>$allBlog]);
+}
 
     /**
      * Show the form for editing the specified resource.
@@ -70,7 +75,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('admin.edit',['blog' => $blog]);
     }
 
     /**
@@ -82,7 +88,16 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+     $blog = Blog::find($id);
+        $blog->title = $request->title;
+        $slug =  Str::slug($request->title);
+        $blog->slug =  $slug ;
+        $blog->isi = $request->isi;
+         $blog->bitly = $blog->bitly;
+        $image = $request->image->store('public/img');
+        $blog->img = basename($image);
+        $blog->save();
+        return redirect('admin/home');
     }
 
     /**

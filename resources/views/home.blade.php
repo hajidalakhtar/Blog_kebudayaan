@@ -1,7 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:-24px;">
+<style>
+.text-concat {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+  line-height: 1.2em;
+  text-align:justify;
+}
+
+.text.ellipsis::after {
+  position: absolute;
+  right: -12px; 
+  bottom: 4px;
+}
+
+</style>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:-24px;">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -29,7 +47,20 @@
 </div>
 <div>
   <div class="container">
+    <h1 class="text-center mt-5">Budaya Indonesia</h1>
+    <div class="row mt-3">
+      <div class="col-6">
+        <img src="storage/img/Contoh Keragaman Budaya Indonesia.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4">
+        
+      </div>
+      <div class="col-md-6 mt-5">
+        Budaya atau kebudayaan berasal dari bahasa sansakerta adalah buddhi yg artinya akal. Budaya merupakan aspek – elemen yg berkenaan bersama budi and akal manusia. Indonesia yakni salah satu negeri yg mempunyai kebudayaan yg amat bermacam macam. Karena keanekaragaman budaya and keunikan yg dipunyai, Indonesia jadi daya tarik bangsa lain dari belahan dunia yg mau mengetahuinya bahkan mereka pula ikut mempelajarinya. 
 
+Indonesia ialah suatu negeri di Asia Tenggara di mana membentang hamparan alam hijau yg indah permai, birunya laut yg luas, dgn beraneka ragam tipe hayati yg mampu menciptakan tiap-tiap orang terkesima. Tanah yg subur bersama beraneka ragam sumber daya alam yg ada and nyaris seluruhnya bangsa di dunia membutuhkannya. Hal itu yg menjadikan sekian banyak negeri mau menguasainya dgn kiat menjajah 
+
+Budaya adalah identitas bangsa yg mesti dihormati, dijaga, and butuh dilestarikan biar kebudayaan ini terus ada play on words sanggup jadi warisan anak cucu nanti. Budaya yg ada di Indonesia dinamakan bersama budaya nasional.
+      </div>
+    </div>
     <h1 class="text-center mt-5">Artikel Budaya </h1>
     <div class="row  justify-content-center ">
       @foreach ($blog as $blog)
@@ -39,12 +70,16 @@
           <img class="card-img-top" src="/storage/img/{{$blog->img}}" alt="" style="width:100%;height:200px;">
          </a>
           <div class="card-head">
-            <h2 class="text-center mt-4">
-            <a href="{{route('details',$blog->slug)}}" class=" text-dark">{{$blog->title}}</a>
-            </h2>
+            <h4 class="text-center mt-4">
+            <a href="{{route('details',$blog->slug)}}" class="text-dark" style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch; text-decoration:none">{{$blog->title}}</a>
+            </h4>
           </div>
           <div class="card-body">
-
+          <div class="text ellipsis">
+            <span class="text-concat">
+              {{$blog->isi}}
+            </span>
+          </div>
           </div>
         </div>
       </div>
@@ -52,5 +87,4 @@
     </div>
   </div>
   </div>
-
 @endsection

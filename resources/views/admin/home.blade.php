@@ -33,10 +33,10 @@
                                 @foreach ($blog as $blog)
                                     
                             <th scope="row">{{$blog->id}}</th>
-                            <td>{{$blog->slug}}</td>
-                            <td>{{$blog->title}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50ch;">{{$blog->isi}}</td>
-                            <td><a href="" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blog->id)}}"class="btn btn-danger">Delete</a> </td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->slug}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->title}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$blog->isi}}</td>
+                            <td><a href="{{route('edit',$blog->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blog->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details',$blog->slug)}}"class="btn btn-success">View</a> </td>
                             </tr>
                             
                             @endforeach

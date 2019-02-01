@@ -9,7 +9,7 @@
     {{-- <meta name="token" id="token" value="{{ csrf_token() }}"> --}}
 
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Budaya Indonesia</title>
     <link href="https://fonts.googleapis.com/css?family=Anton|Comfortaa" rel="stylesheet">
     <!-- Scripts -->
 
@@ -37,7 +37,31 @@
 
     }
  
-    
+    .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.
   @media only screen and (max-width: 750px) {
  .navbutton{
        margin-top:0;
@@ -106,8 +130,52 @@
         <main class="py-4 ">
             @yield('content')
         </main>
+<br>
+
+<footer class="section footer-classic context-dark bg-image pt-5 mt-5" style="background: #ceae8a;">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                <p>Budaya atau kebudayaan berasal dari bahasa Sanskerta yaitu buddhayah, yang merupakan bentuk jamak dari buddhi diartikan sebagai hal-hal yang berkaitan dengan budi, dan akal manusia.</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Hajidalakhtar</span><span>. </span><span>Edutech 2019</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Pekapuran Cimanggis Depok</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">hajidalakhtar@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">+62 822222022</a> 
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">Artikel Budaya</a></li>
+                <li><a href="#">Tokoh Indonesia</a></li>
+                <li><a href="#">Makanan Indonesia</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </footer>
     </div>
 </body>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script>
+    @yield('script')
+</script>
 </html>

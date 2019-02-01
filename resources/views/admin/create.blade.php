@@ -15,9 +15,13 @@
                 <label for="isi">Isi</label>
                 <textarea name="isi" id="" cols="30" rows="10" class="form-control"></textarea>
                 <br>
-                <input type="file" name="image" class= form-control>
+                <label for="isi">Thumbnail</label><br>
+                <input type="file" name="image" >
                 <br>        
-                <input type="submit" value="POST" class="btn btn-primary">
+         
+            
+                <input type="submit" value="POST" class="btn btn-primary mt-4">
+                </div>
             </form>
         </div>
     </div>

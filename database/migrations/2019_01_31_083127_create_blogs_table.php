@@ -19,6 +19,7 @@ class CreateBlogsTable extends Migration
             $table->String('title');
             $table->String('isi',10000);
             $table->String('img');
+            $table->String('bitly');
             $table->timestamps();
         });
     }
