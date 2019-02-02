@@ -60,7 +60,9 @@ ul, ol {
     padding: 0;
     margin: 0;
 }
-
+.hover1:hover{
+    opacity: 1;
+}
 .
   @media only screen and (max-width: 750px) {
  .navbutton{

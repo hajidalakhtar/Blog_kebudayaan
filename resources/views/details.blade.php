@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="jumbotron" style="padding:0; margin-top:-24px;">
     <img src="/storage/img/{{$blog->img}}" alt="" srcset="" style="width: 100% ;">
 </div>
@@ -12,12 +13,16 @@
   <div class="card">
         <div class="card-body">
             <h1 class="text-center">{{$blog->title}}</h1> 
+            <br>
 
-       &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<p class="text-center"> {{$blog->isi}}</p>
+       <p class="text-center"> {{$blog->isi}}</p>
         </div>    
     </div> 
         </div>
-   <div class="col-md-3">
+
+   <div class="col-md-3 " >
+        <div>
+
 <div class="card">
     <div class="card-body">
         <h4>Shorter Url</h4>
@@ -29,24 +34,32 @@
 
     </div>
 </div>
-   </div>
-   <div class="row mt-5">
+<div class="card mt-5">
+    <div class="card-body">
+   <div class="row ">
+       <h4 class="text-center">Random Artikel</h4>
         @foreach ($allBlog as $allBlog)
-        <div class="col-md-4">
-    <a href="{{route('details',$allBlog->slug)}}">
+        <a href="{{route('details',$allBlog->slug)}}">
            <div class="card">
                <div class="card-body" style="padding: 0">
+                <div style="position:absolute; opacity:1 ;background-color: rgb(0, 0, 0,0.8)" class="pb-2 hover1">
+                <p class="text-center text-white pt-3">{{$allBlog->title}}</p>
+                </div>
                 <img src="/storage/img/{{$allBlog->img}}" alt="" width="100%"  >
             </div>
            </div>
         </a>
-    </div>
        @endforeach 
          
    </div>
+   </div>
 
-
+  </div>
+</div>
     </div>  
+
+        </div>
+
  </div>
 
 

@@ -63,28 +63,31 @@ Budaya adalah identitas bangsa yg mesti dihormati, dijaga, and butuh dilestarika
     </div>
     <h1 class="text-center mt-5">Artikel Budaya </h1>
     <div class="row  justify-content-center ">
-      @foreach ($blog as $blog)
+      @foreach ($blog as $blogs)
       <div class="col-md-4 mt-5 " >
         <div class="card">
-            <a href="{{route('details',$blog->slug)}}" class=" text-dark">
-          <img class="card-img-top" src="/storage/img/{{$blog->img}}" alt="" style="width:100%;height:200px;">
+            <a href="{{route('details',$blogs->slug)}}" class=" text-dark">
+          <img class="card-img-top" src="/storage/img/{{$blogs->img}}" alt="" style="width:100%;height:200px;">
          </a>
           <div class="card-head">
             <h4 class="text-center mt-4">
-            <a href="{{route('details',$blog->slug)}}" class="text-dark" style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch; text-decoration:none">{{$blog->title}}</a>
+            <a href="{{route('details',$blogs->slug)}}" class="text-dark" style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch; text-decoration:none">{{$blogs->title}}</a>
             </h4>
           </div>
           <div class="card-body">
           <div class="text ellipsis">
             <span class="text-concat">
-              {{$blog->isi}}
+              {{$blogs->isi}}
             </span>
           </div>
           </div>
         </div>
       </div>
       @endforeach
+      
+      {{ $blog->links() }}
+
     </div>
   </div>
-  </div>
+</div>
 @endsection

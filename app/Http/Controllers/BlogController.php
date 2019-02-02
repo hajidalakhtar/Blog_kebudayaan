@@ -62,7 +62,7 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $allBlog = Blog::paginate(3);
+        $allBlog = Blog::all()->random(3);
         $blog = Blog::where('slug',$slug)->first();
         return view('details',['blog' => $blog,'allBlog'=>$allBlog]);
 }
