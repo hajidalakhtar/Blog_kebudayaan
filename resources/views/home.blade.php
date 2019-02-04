@@ -7,7 +7,7 @@
   display: inline-block;
   word-wrap: break-word;
   overflow: hidden;
-  max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+  max-height: 3.6em; 
   line-height: 1.2em;
   text-align:justify;
 }
@@ -19,7 +19,7 @@
 }
 
 </style>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:-24px;">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -49,11 +49,11 @@
   <div class="container">
     <h1 class="text-center mt-5">Budaya Indonesia</h1>
     <div class="row mt-3">
-      <div class="col-6">
+      <div class="col-md-6  col-sm-12">
         <img src="storage/img/Contoh Keragaman Budaya Indonesia.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4">
         
       </div>
-      <div class="col-md-6 mt-5">
+      <div class="col-md-6 mt-5  col-sm-12">
         Budaya atau kebudayaan berasal dari bahasa sansakerta adalah buddhi yg artinya akal. Budaya merupakan aspek – elemen yg berkenaan bersama budi and akal manusia. Indonesia yakni salah satu negeri yg mempunyai kebudayaan yg amat bermacam macam. Karena keanekaragaman budaya and keunikan yg dipunyai, Indonesia jadi daya tarik bangsa lain dari belahan dunia yg mau mengetahuinya bahkan mereka pula ikut mempelajarinya. 
 
 Indonesia ialah suatu negeri di Asia Tenggara di mana membentang hamparan alam hijau yg indah permai, birunya laut yg luas, dgn beraneka ragam tipe hayati yg mampu menciptakan tiap-tiap orang terkesima. Tanah yg subur bersama beraneka ragam sumber daya alam yg ada and nyaris seluruhnya bangsa di dunia membutuhkannya. Hal itu yg menjadikan sekian banyak negeri mau menguasainya dgn kiat menjajah 
@@ -84,8 +84,8 @@ Budaya adalah identitas bangsa yg mesti dihormati, dijaga, and butuh dilestarika
         </div>
       </div>
       @endforeach
+    <a href="{{route('allartikel')}}" class="btn mt-5 text-white" style="background-color:#ceae8a">Baca Selengkap </a>
       
-      {{ $blog->links() }}
 
     </div>
   </div>

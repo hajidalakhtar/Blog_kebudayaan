@@ -93,7 +93,7 @@ class BlogController extends Controller
         $slug =  Str::slug($request->title);
         $blog->slug =  $slug ;
         $blog->isi = $request->isi;
-         $blog->bitly = $blog->bitly;
+        $blog->bitly = $blog->bitly;
         $image = $request->image->store('public/img');
         $blog->img = basename($image);
         $blog->save();
@@ -112,6 +112,12 @@ class BlogController extends Controller
         $blog->delete();
         return redirect('admin/home');
     }
+    public function allData()
+    {
+        $blog = Blog::all();
+        // dd($blog);
+        return view('artikel.AllArtikel', ['blog'=>$blog]);
+        }
     public function blogApi()
     {
         $blog = Blog::all();
@@ -123,17 +129,6 @@ class BlogController extends Controller
         return $blog;
         
     }
-      public function createArtikel(Request $request)
-    {
-        $blog = new Blog;
-        $blog->title = $request->title;
-        $blog->slug = Str::slug($request->title);
-        $blog->isi = $request->isi;
-        $image = $request->image->store('public/place');
-        $blog->img = "tes.png";
-        $blog->save();
-        // return (['pesan'=>'bisa'] );
-        return redirect('admin/home');
-   //
-    }
+    
+   
 }

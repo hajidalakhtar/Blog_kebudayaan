@@ -4,10 +4,10 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <a href="{{route('admin.create')}}" class="btn  mb-3 text-white" style='background-color:#ceae8a'>Create Post</a>
-        <a href="{{route('tokoh.admin.home')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Tokoh indonesia</a>
+        <a href="{{route('tokoh.admin.create')}}" class="btn  mb-3 text-white" style='background-color:#ceae8a'>Create Post</a>
         <a href="{{route('admin.create')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Makanan Indonesia</a>
         <a href="{{route('admin.create')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Galeri</a>
+        <a href="{{route('admin.create')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Artikel Budaya</a>
         <div class="card">
                 <div class="card-header text-center text-white"  style='background-color:#ceae8a' ><b> Artikel Budaya</b></div>
                 <div class="card-body">
@@ -24,20 +24,19 @@
                             <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Slug</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Descripsi</th>
+                            <th scope="col">Nama_tokoh</th>
+                            <th scope="col">riwayat</th>
                             <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                @foreach ($blog as $blog)
-                                    
-                            <th scope="row">{{$blog->id}}</th>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->slug}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->title}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$blog->isi}}</td>
-                            <td><a href="{{route('edit',$blog->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blog->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details',$blog->slug)}}"class="btn btn-success">View</a> </td>
+                                @foreach ($tokoh as $tokoh)
+                            <th scope="row">{{$tokoh->id}}</th>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$tokoh->slug}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$tokoh->nama_tokoh}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$tokoh->riwayat}}</td>
+                            <td><a href="{{route('tokoh.edit',$tokoh->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete.tokoh',$tokoh->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.tokoh',$tokoh->slug)}}"class="btn btn-success">View</a> </td>
                             </tr>
                             
                             @endforeach

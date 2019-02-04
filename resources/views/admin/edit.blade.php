@@ -3,7 +3,7 @@
 @section('content')
 {{-- <create  v-model="model"></create> --}}
 
-<div class="container">
+<div class="container mt-5">
 <a href="{{route('admin.index')}}" class="btn btn-primary mb-3">BACK</a>
     <div class="card">
         <div class="card-body">

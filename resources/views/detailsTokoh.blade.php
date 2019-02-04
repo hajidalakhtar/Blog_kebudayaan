@@ -1,21 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.tokoh')
 
 @section('content')
 
-<div class="jumbotron" style="padding:0; margin-top:-24px;">
-    <img src="/storage/img/{{$blog->img}}" alt="" srcset="" style="width: 100% ;">
-</div>
-<div class="container">
+
+<div class="container mt-5">
     
     <div class="row">
         
         <div class="col-md-9">
   <div class="card">
         <div class="card-body">
-            <h1 class="text-center">{{$blog->title}}</h1> 
+            <h1 class="text-center">{{$tokoh->nama_tokoh}}</h1> 
             <br>
 
-       <p class="text-center"> {{$blog->isi}}</p>
+       <p class="text-center"> {{$tokoh->riwayat}}</p>
         </div>    
     </div> 
     <div id="disqus_thread" class="mt-5"></div>
@@ -27,7 +25,7 @@
 
 var disqus_config = function () {
 this.page.url = '{{ Request::url() }}';  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = {{$blog->slug}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.identifier = {{$tokoh->slug}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -41,52 +39,36 @@ s.setAttribute('data-timestamp', +new Date());
                             
  </div>
 
-    
 
-   <div class="col-md-3" >
+   <div class="col-md-3 " >
         <div>
+            <div class="card">
+                <div class="card-body" >
+                   <p class="text-center h5 pt-1">Foto {{$tokoh->nama_tokoh}}</p> 
+                    
+    <img src="/storage/tokoh/{{$tokoh->foto_tokoh}}" alt="" srcset="" style="width: 100% ;">
 
+   <p class="text-center h4 mt-3"> {{$tokoh->tgl_lahir}} - {{$tokoh->tgl_wafat}}</p>
+                </div>
+            </div>
+{{-- 
 <div class="card">
     <div class="card-body">
-        <h4 class="text-center">Shorter Url</h4>
+        <h4>Shorter Url</h4>
 
         <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}">
         <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}" alt="" srcset="" width="100%" >  
         </a>
-      <p class="text-center"><a href="{{$blog->bitly}}" >{{$blog->bitly}}</a></p> 
+        <a href="{{$blog->bitly}}" class="text-center">{{$blog->bitly}}</a>
 
     </div>
-</div>
-<div class="card mt-5">
-    <div class="card-body">
-   <div class="row ">
-       <h4 class="text-center">Random Artikel</h4>
-        @foreach ($allBlog as $allBlog)
-        <a href="{{route('details',$allBlog->slug)}}">
-           <div class="card">
-               <div class="card-body" style="padding: 0">
-                <div style="position:absolute; opacity:1 ;background-color: rgb(0, 0, 0,0.8);width:100%;height:100%" class="pb-2 hover1">
-                <p class="text-center text-white pt-3">{{$allBlog->title}}</p>
-                </div>
-                <img src="/storage/img/{{$allBlog->img}}" alt="" width="100%"  >
-            </div>
-           </div>
-        </a>
-       @endforeach 
-         
-   </div>
-   </div>
+</div> --}}
 
-  </div>
 </div>
-
     </div>  
         </div>
 
         </div>
-        
-
- </div>
 
 
 

@@ -19,7 +19,7 @@ class AdminLoginController extends Controller
         return redirect('/admin/home');
       }
 
-      return "login admin gagal";
+        return redirect('/admin/login');
     }
 
     public function logout()
