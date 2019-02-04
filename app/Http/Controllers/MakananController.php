@@ -46,4 +46,22 @@ class MakananController extends Controller
         $makanan = MakananIndonesia::where('slug',$slug)->first();
         return view('makanan.detailsmakanan', ['makanan'=>$makanan]);
     }
+    public function edit($id)
+    {
+        $makanan = MakananIndonesia::find($id);
+        $makanan->nama_makanan = $request->nama_makanan;
+        $slug =  Str::slug($request->nama_makanan);
+        $makanan->slug =  $slug ;
+        $makanan->asal_daerah = $request->asal_daerah;
+        $image = $request->foto_makanan->store('public/makanan');
+        $makanan->foto_makanan = basename($image);
+        $makanan->deskripsi = $request->deskripsi;
+        $makanan->save();
+        return redirect('/admin/makanan/home');
+    }
+    public function viewEdit($id)
+    {
+        $makanan = MakananIndonesia::find($id);
+        return view('admin.makanan.edit', ['makanan'=>$makanan]);
+    }
 }

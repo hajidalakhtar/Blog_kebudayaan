@@ -51,18 +51,18 @@ s.setAttribute('data-timestamp', +new Date());
    <p class="text-center h4 mt-3"> {{$tokoh->tgl_lahir}} - {{$tokoh->tgl_wafat}}</p>
                 </div>
             </div>
-{{-- 
-<div class="card">
+
+<div class="card mt-5">
     <div class="card-body">
         <h4>Shorter Url</h4>
 
-        <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}">
-        <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}" alt="" srcset="" width="100%" >  
+        <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$tokoh->slug}}">
+        <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$tokoh->slug}}" alt="" srcset="" width="100%" >  
         </a>
-        <a href="{{$blog->bitly}}" class="text-center">{{$blog->bitly}}</a>
+       <p class="text-center"><a href="{{$tokoh->bitly}}" >{{$tokoh->bitly}}</a></p> 
 
     </div>
-</div> --}}
+</div>
 
 </div>
     </div>  

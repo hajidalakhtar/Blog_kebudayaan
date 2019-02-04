@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/admin/login', 'AdminLoginController@showLoginForm');
 Route::post('/admin/login/submit', 'AdminLoginController@login')->name('admin.login');
 Route::get('/admin/logout', 'AdminLoginController@logout')->name('admin.logout');
-Route::get('/admin/home' , 'AdminController@home')->middleware('auth:admin');
+Route::get('/admin/home' , 'AdminController@home')->middleware('auth:admin')->name('artikel.admin.home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/delete/{id}', 'BlogController@delete')->name('delete');
 Route::get('/admin/edit/{id}','BlogController@edit')->name('edit');
@@ -42,10 +42,8 @@ Route::get('/admin/makanan/home','MakananController@index')->name('makanan.admin
 Route::get('/admin/makanan/create','MakananController@create')->name('makanan.admin.create');
 Route::get('/admin/makanan/delete/{id}','MakananController@delete')->name('makanan.admin.delete');
 Route::post('/admin/makanan/store','MakananController@store')->name('makanan.admin.store');
-
-// api
-Route::get('/api/blog', 'BlogController@blogApi');
-Route::get('/api/blog/detail/{slug}', 'BlogController@blogApiDetail');
+Route::get('/admin/makanan/store/{id}','MakananController@edit')->name('makanan.store');
+Route::get('/admin/makanan/edit/{id}','MakananController@viewEdit')->name('makanan.edit');
 
 
 
@@ -61,6 +59,13 @@ Route::get('/tokoh/details/{slug}','TokohController@show')->name('details.tokoh'
 Route::get('/makanan', 'MakananController@home')->name('makanan.home');
 Route::get('/makanan/details/{slug}','MakananController@details')->name('details.makanan');
 
-// auth
-Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+
+// api
+Route::get('/api', function () {
+    return view('api');
+});
+Route::get('/api/blog', 'BlogController@blogApi');
+Route::get('/api/blog/details/{slug}', 'BlogController@blogApiDetail');
+Route::get('/api/tokoh', 'TokohController@allApi');
+Route::get('/api/tokoh/details/{slug}', 'TokohController@apidetails');
+

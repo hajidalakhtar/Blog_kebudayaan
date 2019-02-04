@@ -164,12 +164,11 @@ ul, ol {
             </div>
             <div class="col-md-4 col-xl-3">
               <h5>Links</h5>
-              <ul class="nav-list">
-                <li><a href="#">Artikel Budaya</a></li>
-                <li><a href="#">Tokoh Indonesia</a></li>
-                <li><a href="#">Makanan Indonesia</a></li>
-                <li><a href="#">Galeri</a></li>
-                <li><a href="#">API</a></li>
+            <ul class="nav-list">
+                <li><a href="/home">Artikel Budaya</a></li>
+              <li><a href="{{route('tokoh.home')}}">Tokoh Indonesia</a></li>
+              <li><a href="{{route('makanan.home')}}">Makanan Indonesia</a></li>
+              <li><a href="/api">API</a></li>
               </ul>
             </div>
           </div>

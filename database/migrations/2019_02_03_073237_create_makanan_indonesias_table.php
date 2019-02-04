@@ -20,6 +20,7 @@ class CreateMakananIndonesiasTable extends Migration
             $table->string('asal_daerah');
             $table->string('deskripsi',10000);
             $table->string('foto_makanan');
+            $table->string('bitly');
             $table->timestamps();
         });
     }

@@ -35,6 +35,8 @@ class TokohController extends Controller
         $tokoh->tgl_wafat = $request->tgl_wafat;
         $tokoh->riwayat = $request->riwayat;
         $image = $request->foto_tokoh->store('public/tokoh');
+        $url = app('bitly')->getUrl('http://127.0.0.1:8000/tokoh/details/'.$slug); // http://bit.ly/nHcn3
+        $tokoh->bitly = $url;
         $tokoh->foto_tokoh = basename($image);
         $tokoh->save();
         return redirect('/admin/tokoh/home');
@@ -54,5 +56,15 @@ class TokohController extends Controller
     {
         $tokoh = Tokoh::find($id);
         return view('admin.tokoh.edit', ['tokoh'=>$tokoh]);
+    }
+    public function allApi()
+    {
+        $tokoh = Tokoh::all();
+        return $tokoh;
+    }
+    public function apidetails($slug)
+    {
+         $tokoh = Tokoh::where('slug',$slug)->first();
+         return $tokoh;
     }
 }
