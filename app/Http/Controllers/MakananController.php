@@ -9,8 +9,8 @@ class MakananController extends Controller
 {
     public function index()
     {
-        $maknan = MakananIndonesia::all();
-        return view('admin.makanan.home', ['maknan'=>$maknan]);
+        $maknan = MakananIndonesia::paginate(10);
+        return view('admin.makanan.home', ['makanan'=>$maknan]);
         
     }
     public function create()

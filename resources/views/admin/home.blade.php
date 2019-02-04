@@ -30,19 +30,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                @foreach ($blog as $blog)
+                            @foreach ($blog as $blogs)
+                                <tr>
                                     
-                            <th scope="row">{{$blog->id}}</th>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->slug}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blog->title}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$blog->isi}}</td>
-                            <td><a href="{{route('edit',$blog->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blog->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details',$blog->slug)}}"class="btn btn-success">View</a> </td>
-                            </tr>
+                            <th scope="row">{{$blogs->id}}</th>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blogs->slug}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blogs->title}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$blogs->isi}}</td>
+                            <td><a href="{{route('edit',$blogs->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blogs->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details',$blogs->slug)}}"class="btn btn-success">View</a> </td>
                             
-                            @endforeach
-                        </tbody>
-                        </table>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                <div class="float-right">{{ $blog->links() }}</div>
                 </div>
             </div>
         </div>

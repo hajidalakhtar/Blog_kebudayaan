@@ -31,12 +31,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                @foreach ($maknan as $maknan)
-                            <th scope="row">{{$maknan->id}}</th>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$maknan->slug}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$maknan->nama_makanan}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$maknan->asal_daerah}}</td>
-                            <td><a href="{{route('makanan.edit',$maknan->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('makanan.admin.delete',$maknan->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.makanan',$maknan->slug)}}"class="btn btn-success">View</a> </td>
+                                @foreach ($makanan as $data)
+                            <th scope="row">{{$data->id}}</th>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->slug}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->nama_makanan}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$data->asal_daerah}}</td>
+                            <td><a href="{{route('makanan.edit',$data->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('makanan.admin.delete',$data->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.makanan',$data->slug)}}"class="btn btn-success">View</a> </td>
                             </tr>
                             
                             @endforeach

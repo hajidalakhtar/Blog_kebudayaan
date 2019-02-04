@@ -8,8 +8,7 @@ class AdminController extends Controller
 {
     public function home()
     {
-      $blog = Blog::all();
-
+      $blog = Blog::paginate(5);
     return view('admin.home',['blog' => $blog]);
     }
 }

@@ -17,7 +17,7 @@ class TokohController extends Controller
     public function homeAdmin()
     {
 
-        $tokoh  = Tokoh::paginate(10);
+        $tokoh  = Tokoh::paginate(5);
         return view('admin.tokoh.home', ['tokoh'=>$tokoh]);
 
     }
@@ -56,6 +56,11 @@ class TokohController extends Controller
     {
         $tokoh = Tokoh::find($id);
         return view('admin.tokoh.edit', ['tokoh'=>$tokoh]);
+    }
+    public function allTokoh()
+    {
+        $tokoh = Tokoh::paginate(12);
+        return view('semuatokoh', ['tokoh'=>$tokoh]);
     }
     public function allApi()
     {

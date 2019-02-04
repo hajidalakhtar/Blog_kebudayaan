@@ -31,17 +31,18 @@
                         </thead>
                         <tbody>
                             <tr>
-                                @foreach ($tokoh as $tokoh)
-                            <th scope="row">{{$tokoh->id}}</th>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$tokoh->slug}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$tokoh->nama_tokoh}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$tokoh->riwayat}}</td>
-                            <td><a href="{{route('tokoh.edit',$tokoh->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete.tokoh',$tokoh->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.tokoh',$tokoh->slug)}}"class="btn btn-success">View</a> </td>
+                                @foreach ($tokoh as $data)
+                            <th scope="row">{{$data->id}}</th>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->slug}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->nama_tokoh}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$data->riwayat}}</td>
+                            <td><a href="{{route('tokoh.edit',$data->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete.tokoh',$data->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.tokoh',$data->slug)}}"class="btn btn-success">View</a> </td>
                             </tr>
                             
                             @endforeach
                         </tbody>
                         </table>
+                        <div class="float-right">{{ $tokoh->links() }}</div>
                 </div>
             </div>
         </div>

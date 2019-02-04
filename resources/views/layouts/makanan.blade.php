@@ -93,9 +93,8 @@ ul, ol {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ml-5 ">
                         <a href="/home" class="text-white pl-2 pr-2 navbutton text-white" style="text-decoration: none"><b>Arikel Budaya</b> </a> 
-                    <a href="{{route('tokoh.home')}}" class="text-white pl-2 pr-2 navbutton text-white" style="text-decoration: none"> <b> Tokoh Indonesia</b></a>  
-                    <a href="{{route('makanan.home')}}" class="text-white pl-2 pr-2 navbutton text-white" style="text-decoration: none"><b> Makanan Indonesia</b></a> 
-                        <a href="" class="text-white pl-2 pr-2 navbutton text-white borderkanan" style="text-decoration: none; "><b> Galeri</b></a>
+                         <a href="{{route('tokoh.home')}}" class="text-white pl-2 pr-2 navbutton text-white" style="text-decoration: none"> <b> Tokoh Indonesia</b></a>  
+                         <a href="{{route('makanan.home')}}" class="text-white pl-2 pr-2 navbutton text-white borderkanan" style="text-decoration: none"><b> Makanan Indonesia</b></a> 
                     </ul>
                     <ul class="navbar-nav ml-auto ">
                         @guest

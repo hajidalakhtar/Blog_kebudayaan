@@ -43,7 +43,7 @@
 <h1 class="text-center mt-5">Tokoh Indonesia</h1>
 <div class="container">
 
-<div class="row mt-3">
+<div class="row mt-3 justify-content-center">
     @foreach ($tokoh as $tokoh)
     <div class="col-md-3 mt-4" style="padding:1">
     <a href="{{Route('details.tokoh',$tokoh->slug)}}">
@@ -63,8 +63,8 @@
   </a>
     </div>
     @endforeach
-
-      </div>
+     <a href="{{route('tokoh.home.all')}}" class="btn mt-5 text-white" style="background-color:#ceae8a">Baca Selengkap </a>
+    </div>
 
 </div>
 </div>

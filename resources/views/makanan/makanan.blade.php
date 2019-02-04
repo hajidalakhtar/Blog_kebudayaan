@@ -48,7 +48,7 @@
           <div class="card-body">
           <div class="text ellipsis">
             <span class="text-concat">
-              {{$makanans->deskripsi}}
+              {{$makanan->deskripsi}}
             </span>
           </div>
           </div>

@@ -54,6 +54,9 @@ Route::get('/blog/all','BlogController@allData')->name('allartikel');
 // Tokoh Indonesia
 Route::get('/tokoh','TokohController@index')->name('tokoh.home'); 
 Route::get('/tokoh/details/{slug}','TokohController@show')->name('details.tokoh');
+Route::get('/tokoh/all','TokohController@allTokoh')->name('tokoh.home.all'); 
+
+
 
 // Makanan indonesia
 Route::get('/makanan', 'MakananController@home')->name('makanan.home');
