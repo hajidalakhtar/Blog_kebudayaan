@@ -72,3 +72,6 @@ Route::get('/api/blog/details/{slug}', 'BlogController@blogApiDetail');
 Route::get('/api/tokoh', 'TokohController@allApi');
 Route::get('/api/tokoh/details/{slug}', 'TokohController@apidetails');
 
+
+// search
+Route::any('/search','BlogController@search');

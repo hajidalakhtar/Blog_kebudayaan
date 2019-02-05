@@ -61,7 +61,7 @@ Indonesia ialah suatu negeri di Asia Tenggara di mana membentang hamparan alam h
 Budaya adalah identitas bangsa yg mesti dihormati, dijaga, and butuh dilestarikan biar kebudayaan ini terus ada play on words sanggup jadi warisan anak cucu nanti. Budaya yg ada di Indonesia dinamakan bersama budaya nasional.
       </div>
     </div>
-    <h1 class="text-center mt-5">Artikel Budaya </h1>
+    <h1 class="text-center mt-5">Artikel Budaya </h1> 
     <div class="row  justify-content-center ">
       @foreach ($blog as $blogs)
       <div class="col-md-4 mt-5 " >

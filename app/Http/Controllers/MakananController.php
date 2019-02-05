@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\MakananIndonesia;
 use Illuminate\Support\Str;
+use Bitly;
 use Illuminate\Http\Request;
 
 class MakananController extends Controller
@@ -25,6 +26,8 @@ class MakananController extends Controller
         $makanan->slug =  $slug ;
         $makanan->asal_daerah = $request->asal_daerah;
         $image = $request->foto_makanan->store('public/makanan');
+        $url = app('bitly')->getUrl('http://127.0.0.1:8000/makanan/details/'.$slug); 
+        $makanan->bitly = $url;
         $makanan->foto_makanan = basename($image);
         $makanan->deskripsi = $request->deskripsi;
         $makanan->save();
@@ -63,5 +66,15 @@ class MakananController extends Controller
     {
         $makanan = MakananIndonesia::find($id);
         return view('admin.makanan.edit', ['makanan'=>$makanan]);
+    }
+     public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $makana = MakananIndonesia::where('nama_makanan','like','%'.$search.'%')->paginate(5);
+           if(count($makana) > 0)
+            return view('artikel.AllArtikel', ['blog'=>$makana]);
+          else return "TIDAK ADA";
+        return view('artikel.AllArtikel',  ['blog'=>$makana]);
+
     }
 }

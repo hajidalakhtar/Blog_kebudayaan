@@ -17,16 +17,25 @@
   right: -12px; 
   bottom: 4px;
 }
+.center {
+  display: block;
+  margin-left: 37%;
+  margin-right: 40%;
+  width: 100%;
+}
 
 </style>
 
 <div>
-  <div class="container">
+  <div class="container ">
    
-      <h1 class="mt-5 text-center">Artikel Kebudayaan</h1>
+      <h1 class="mt-5 text-center mb-5">Artikel Kebudayaan</h1>
+       <form class="form-inline my-2 my-lg-0 " method="GET" action="/search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Cari Artikel" name="search" aria-label="Search" style="width:100%">
+      </form>
     <div class="row  justify-content-center ">
       @foreach ($blog as $blogs)
-      <div class="col-md-4 mt-5 " >
+      <div class="col-md-4 mt-4 " >
         <div class="card">
             <a href="{{route('details',$blogs->slug)}}" class=" text-dark">
           <img class="card-img-top" src="/storage/img/{{$blogs->img}}" alt="" style="width:100%;height:200px;">

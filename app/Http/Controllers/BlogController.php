@@ -129,6 +129,16 @@ class BlogController extends Controller
         return $blog;
         
     }
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $blog = Blog::where('title','like','%'.$search.'%')->paginate(5);
+           if(count($blog) > 0)
+            return view('artikel.AllArtikel', ['blog'=>$blog]);
+          else return "TIDAK ADA";
+        return view('artikel.AllArtikel',  ['blog'=>$blog]);
+
+    }
     
    
 }

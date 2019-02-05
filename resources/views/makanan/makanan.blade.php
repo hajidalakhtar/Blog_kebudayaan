@@ -42,13 +42,13 @@
          </a>
           <div class="card-head">
             <h4 class="text-center mt-4">
-            <a href="{{route('details',$makanans->slug)}}" class="text-dark" style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch; text-decoration:none">{{$makanans->nama_makanan}}</a>
+            <a href="{{route('details.makanan',$makanans->slug)}}" class="text-dark" style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch; text-decoration:none">{{$makanans->nama_makanan}}</a>
             </h4>
           </div>
           <div class="card-body">
           <div class="text ellipsis">
             <span class="text-concat">
-              {{$makanan->deskripsi}}
+              {{$makanans->deskripsi}}
             </span>
           </div>
           </div>
