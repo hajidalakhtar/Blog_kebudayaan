@@ -14,6 +14,7 @@
     <!-- Scripts -->
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
@@ -63,7 +64,7 @@ ul, ol {
 .hover1:hover{
     opacity: 1;
 }
-.
+
   @media only screen and (max-width: 750px) {
    
  .navbutton{

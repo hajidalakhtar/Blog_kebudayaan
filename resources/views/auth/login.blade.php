@@ -16,12 +16,29 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+       <style>
+    .btn-googleplus {
+	  background: #E93F2E;
+	  border-radius: 0;
+	  color: #fff;
+	  border-width: 1px;
+	  border-style: solid;
+	  border-color: #b72213;
+	}
+	.btn-googleplus:link, .btn-googleplus:visited {
+	  color: #fff;
+	}
+	.btn-googleplus:active, .btn-googleplus:hover {
+	  background: #b72213;
+	  color: #fff;
+	}
+    </style>
     
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -79,11 +96,9 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                              
+                                <a href="{{ url('/auth/google') }}" title="Google+" class="btn btn-googleplus"><i class="fa fa-google-plus fa-fw"></i> Google</a>
+
                             </div>
                         </div>
                     </form>

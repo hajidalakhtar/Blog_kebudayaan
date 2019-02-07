@@ -73,14 +73,15 @@ class TokohController extends Controller
          $tokoh = Tokoh::where('slug',$slug)->first();
          return $tokoh;
     }
-       public function search(Request $request)
+      public function search(Request $request)
     {
         $search = $request->get('search');
         $tokoh = Tokoh::where('nama_tokoh','like','%'.$search.'%')->paginate(5);
-           if(count($tokoh) > 0)
-            return view('artikel.AllArtikel', ['blog'=>$tokoh]);
-          else return "TIDAK ADA";
-        return view('artikel.AllArtikel',  ['blog'=>$tokoh]);
+        $tidakada = "tokoh";
+        if(count($tokoh) > 0)
+        return view('semuatokoh', ['tokoh'=>$tokoh]);
+        else 
+        return view('tidakada',['data'=>$tidakada]);
 
     }
     

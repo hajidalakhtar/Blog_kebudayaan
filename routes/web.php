@@ -74,4 +74,9 @@ Route::get('/api/tokoh/details/{slug}', 'TokohController@apidetails');
 
 
 // search
-Route::any('/search','BlogController@search');
+Route::any('/search/artikel','BlogController@search');
+Route::any('/search/tokoh','TokohController@search');
+
+
+Route::get('auth/{provider}', 'AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'AuthController@handleProviderCallback');

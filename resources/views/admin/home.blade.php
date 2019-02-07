@@ -7,7 +7,6 @@
         <a href="{{route('admin.create')}}" class="btn  mb-3 text-white" style='background-color:#ceae8a'>Create Post</a>
         <a href="{{route('tokoh.admin.home')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Tokoh indonesia</a>
         <a href="{{route('makanan.admin.home')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Makanan Indonesia</a>
-        <a href="{{route('admin.create')}}" class="btn  mb-3 ml-3 text-white float-right" style='background-color:#ceae8a'>Galeri</a>
         <div class="card">
                 <div class="card-header text-center text-white"  style='background-color:#ceae8a' ><b> Artikel Budaya</b></div>
                 <div class="card-body">

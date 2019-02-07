@@ -31,7 +31,10 @@
 <div>
   <div class="container ">
    
-      <h1 class="mt-5 text-center">Tokoh Indonesia</h1>
+      <h1 class="mt-5 text-center mb-4">Tokoh Indonesia</h1>
+        <form class="form-inline my-2 my-lg-0 " method="GET" action="/search/tokoh">
+          <input class="form-control mr-sm-2 mb-3" type="search" placeholder="Cari Artikel" name="search" aria-label="Search" style="width:100%">
+      </form>
     <div class="row  justify-content-center ">
       @foreach ($tokoh as $data)
     <div class="col-md-3 mt-4" style="padding:1">
@@ -55,7 +58,7 @@
     
     
 </div>
-<div class="float-right mt-2"> {{ $tokoh->links() }}</div>
+<div class="float-right mt-4 "> {{ $tokoh->links() }}</div>
   </div>
 </div>
 @endsection
