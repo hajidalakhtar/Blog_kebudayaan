@@ -15,7 +15,7 @@
             <h1 class="text-center">{{$blog->title}}</h1> 
             <br>
 
-       <p class="text-center"> {{$blog->isi}}</p>
+       <p class="text-center"> {!!$blog->isi!!}</p>
         </div>    
     </div> 
     <div id="disqus_thread" class="mt-5"></div>
@@ -50,9 +50,7 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="card-body">
         <h4 class="text-center">Shorter Url</h4>
 
-        <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}">
-        <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$blog->slug}}" alt="" srcset="" width="100%" >  
-        </a>
+            <div class=" text-center"> {!! QrCode::size(200)->generate(Request::url()); !!}  </div>  
       <p class="text-center"><a href="{{$blog->bitly}}" >{{$blog->bitly}}</a></p> 
 
     </div>

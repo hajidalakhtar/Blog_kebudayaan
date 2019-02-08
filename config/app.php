@@ -162,7 +162,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Shivella\Bitly\BitlyServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,        /*
+        Laravel\Socialite\SocialiteServiceProvider::class,        
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        /*
          * Package Service Providers...
          */
 
@@ -225,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Bitly' => Shivella\Bitly\Facade\Bitly::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
     ],
 
 ];

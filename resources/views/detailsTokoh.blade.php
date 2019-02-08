@@ -13,7 +13,7 @@
             <h1 class="text-center">{{$tokoh->nama_tokoh}}</h1> 
             <br>
 
-       <p class="text-center"> {{$tokoh->riwayat}}</p>
+       <p class=""> {{$tokoh->riwayat}}</p>
         </div>    
     </div> 
     <div id="disqus_thread" class="mt-5"></div>
@@ -54,12 +54,12 @@ s.setAttribute('data-timestamp', +new Date());
 
 <div class="card mt-5">
     <div class="card-body">
-        <h4>Shorter Url</h4>
+        <h4 class="text-center ">Shorter Url</h4>
 
-        <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$tokoh->slug}}">
-        <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$tokoh->slug}}" alt="" srcset="" width="100%" >  
-        </a>
-       <p class="text-center"><a href="{{$tokoh->bitly}}" >{{$tokoh->bitly}}</a></p> 
+        <div class="text-center">
+            {!! QrCode::size(200)->generate(Request::url()); !!}    
+            <p class="text-center"><a href="{{$tokoh->bitly}}" >{{$tokoh->bitly}}</a></p> 
+        </div>
 
     </div>
 </div>

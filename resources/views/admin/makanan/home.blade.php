@@ -25,6 +25,7 @@
                             <th scope="col">Slug</th>
                             <th scope="col">Nama Makanan</th>
                             <th scope="col">Asal Daerah</th>
+                            <th scope="col">Bitly</th>
                             <th scope="col">ACTION</th>
                             </tr>
                         </thead>
@@ -35,6 +36,7 @@
                             <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->slug}}</td>
                             <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$data->nama_makanan}}</td>
                             <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$data->asal_daerah}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;"><a href="{{$data->bitly}}"> {{$data->bitly}} </a></td>
                             <td><a href="{{route('makanan.edit',$data->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('makanan.admin.delete',$data->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details.makanan',$data->slug)}}"class="btn btn-success">View</a> </td>
                             </tr>
                             

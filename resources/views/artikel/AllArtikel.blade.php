@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <style>
 .text-concat {
   position: relative;
@@ -48,7 +49,7 @@
           <div class="card-body">
           <div class="text ellipsis">
             <span class="text-concat">
-              {{$blogs->isi}}
+              {!!$blogs->isi!!}
 
             </span>
           </div>
@@ -56,6 +57,9 @@
         </div>
       </div>
       @endforeach
+    </div>
+    <div class="mt-5">
+      {{ $blog->links() }}
 
     </div>
   </div>

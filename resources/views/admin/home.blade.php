@@ -24,7 +24,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Slug</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Descripsi</th>
+                            <th scope="col">Bitly</th>
                             <th scope="col">ACTION</th>
                             </tr>
                         </thead>
@@ -35,7 +35,7 @@
                             <th scope="row">{{$blogs->id}}</th>
                             <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blogs->slug}}</td>
                             <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{$blogs->title}}</td>
-                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{$blogs->isi}}</td>
+                            <td  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;"> <a href="{{$blogs->bitly}}"> {{$blogs->bitly}}</a></td>
                             <td><a href="{{route('edit',$blogs->id)}}" class="btn btn-primary">Edit</a> <a href="{{route('delete',$blogs->id)}}"class="btn btn-danger mr-1">Delete</a><a href="{{route('details',$blogs->slug)}}"class="btn btn-success">View</a> </td>
                             
                         </tr>

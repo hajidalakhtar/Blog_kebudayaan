@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta name="token" id="token" value="{{ csrf_token() }}"> --}}
 
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png"/>
 
     <title>Budaya Indonesia</title>
     <link href="https://fonts.googleapis.com/css?family=Anton|Comfortaa" rel="stylesheet">
@@ -53,9 +54,7 @@ ul, ol {
     padding: 0;
     margin: 0;
 }
-.hover1:hover{
-    opacity: 1;
-}
+
 
   @media only screen and (max-width: 750px) {
    
@@ -77,7 +76,6 @@ ul, ol {
 <body style="font-family: 'Comfortaa', cursive;">
     
     <div id="app">
-
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel sticky-top " style="z-index: 1000 ;background-color:#ceae8a">
             <div class="container">
                <div class="iconPreview no-attribution" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIxMjAwIiB2aWV3Qm94PSIwIDAgMTIwMCAxMjAwIj48Zz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MDAgNjAwKSBzY2FsZSgwLjY5IDAuNjkpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoLTYwMCAtNjAwKSIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI1Nyw0My4zYy0xMS45LTU2LTU1LjEsMTMuNC0xMzAsMzUuOUM0OS44LDEwMi41LTguMyw0OC42LDkuNiwxMTMuMSAgQzQ3LjUsMjQ5LDEzNi4zLDMyOC44LDE5Ny40LDMwOS4yYzQuOC0xLjUsMTgtNC40LDIyLjUtNi41YzMuOC0zMi4xLDExLjItNjYuOSwyNS40LTEwMi44YzExLjUtMjkuMSwyMC42LTI3LjYsMzQuOC0xNC44ICBDMjgxLjYsMTQ4LjUsMjY5LjYsMTAyLjgsMjU3LDQzLjN6IE05NSwxNTguOWMtMTkuMSwyLjYtMzMuNCwxNy45LTM0LDEzLjljLTAuNi00LjEsMTIuOC0yNS45LDMyLTI4LjZjMTkuMS0yLjYsMzYuOCwxNSwzNy40LDE5ICBDMTMwLjksMTY3LjMsMTE0LjEsMTU2LjMsOTUsMTU4Ljl6IE0xODcuMSwyNDguN2MtMjMuOCw3LjQtNTUtOS01Ny45LTE4LjNzMjMuNi00LjgsNDcuNS0xMi4yczQ1LjUtMjUuOSw0OC40LTE2LjYgIEMyMjcuOSwyMTAuOSwyMTAuOSwyNDEuMywxODcuMSwyNDguN3ogTTIwNi4zLDEyNi4xYy0xNy40LDguMy0yNi40LDI3LjItMjguMiwyMy41Yy0xLjgtMy43LDQuNC0yOC42LDIxLjgtMzYuOXMzOS42LDMuMSw0MS40LDYuOCAgQzI0MywxMjMuMiwyMjMuNywxMTcuOCwyMDYuMywxMjYuMXoiPjwvcGF0aD48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzc1LjYsMjY2LjNjLTc1LjYtMjcuOS04OS41LTEwNi0xMTQtNDMuN2MtNTEuNywxMzEuMy0yOC45LDI0OC41LDMxLjYsMjY5LjcgIGM2MC41LDIxLjIsMTI4LTUuNywyMDcuOC0xNzYuM0M1MjUuMywyNjQuMSw0NDksMjkzLjQsMzc1LjYsMjY2LjN6IE0yNjkuMywyOTQuMWMwLjktNCwxMy45LDEyLjQsMzIuNywxNi43ICBjMTguOSw0LjIsMzYuNS01LjQsMzUuNi0xLjRjLTAuOSw0LTE5LjksMjAuMS0zOC44LDE1LjlDMjc5LjksMzIxLDI2OC40LDI5OC4xLDI2OS4zLDI5NC4xeiBNMzYzLjQsNDQ2LjMgIGMtMy42LDktMjMuNy0xMS4yLTQ2LjgtMjAuNWMtMjMuMS05LjMtNDkuOS03LjEtNDYuMy0xNi4xYzMuNi05LDM2LTIyLjcsNTkuMi0xMy40QzM1Mi42LDQwNS41LDM2Nyw0MzcuMiwzNjMuNCw0NDYuM3ogICBNNDQ0LjYsMzYyLjJjLTIuMSwzLjUtMjUuMSwxMy4xLTQxLjgsMy40Yy0xNi43LTkuNy0yMC43LTM1LjEtMTguNy0zOC42YzIuMS0zLjUsOS40LDE2LjEsMjYuMSwyNS44ICBDNDI2LjksMzYyLjUsNDQ2LjYsMzU4LjYsNDQ0LjYsMzYyLjJ6Ij48L3BhdGg+PC9zdmc+PC9nPjwvZz48L3N2Zz4=);"></div>
@@ -90,6 +88,7 @@ ul, ol {
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ml-5  ">
+                        
                         <div class="navbutton">
                         <a href="/home" class="text-white pl-2 pr-2  text-white" style="text-decoration: none"><b>Arikel Budaya</b> </a> 
                         </div >

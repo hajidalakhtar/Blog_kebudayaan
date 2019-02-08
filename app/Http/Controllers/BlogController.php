@@ -88,7 +88,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-     $blog = Blog::find($id);
+        $blog = Blog::find($id);
         $blog->title = $request->title;
         $slug =  Str::slug($request->title);
         $blog->slug =  $slug ;
@@ -114,7 +114,7 @@ class BlogController extends Controller
     }
     public function allData()
     {
-        $blog = Blog::orderBy('id', 'DESC')->get();
+        $blog = Blog::orderBy('id', 'DESC')->paginate(6);
         // dd($blog);
         return view('artikel.AllArtikel', ['blog'=>$blog]);
         }

@@ -78,7 +78,7 @@ Budaya adalah identitas bangsa yg mesti dihormati, dijaga, and butuh dilestarika
           <div class="card-body">
           <div class="text ellipsis">
             <span class="text-concat">
-              {{$blogs->isi}}
+              {!!$blogs->isi!!}
             </span>
           </div>
           </div>

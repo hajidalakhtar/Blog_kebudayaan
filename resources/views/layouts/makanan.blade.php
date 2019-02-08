@@ -8,8 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta name="token" id="token" value="{{ csrf_token() }}"> --}}
 
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png"/>
 
-    <title>Budaya Indonesia</title>
+    <title>Makanan Indonesia</title>
     <link href="https://fonts.googleapis.com/css?family=Anton|Comfortaa" rel="stylesheet">
     <!-- Scripts -->
 

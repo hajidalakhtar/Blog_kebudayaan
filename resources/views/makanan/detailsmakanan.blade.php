@@ -37,11 +37,12 @@
             <div class="card ">
                 <div class="card-body">
                     <h4>Shorter Url</h4>
-                    <a href="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$makanan->slug}}">
-                    <img src="https://qr.johneletto.com/http://localhost:8000/blog/details/{{$makanan->slug}}" alt="" srcset="" width="100%" >  
-                    </a>
-                <p class="text-center"><a href="{{$makanan->bitly}}" >{{$makanan->bitly}}</a></p> 
-                </div>
+                    <div class="text-center">
+
+                        {!! QrCode::size(200)->generate(Request::url()); !!}    
+                        <p class="text-center"><a href="{{$makanan->bitly}}" >{{$makanan->bitly}}</a></p> 
+                    </div>
+                    </div>
             </div>
             </div>
         </div>
