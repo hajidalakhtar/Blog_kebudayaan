@@ -114,7 +114,7 @@ class BlogController extends Controller
     }
     public function allData()
     {
-        $blog = Blog::all();
+        $blog = Blog::orderBy('id', 'DESC')->get();
         // dd($blog);
         return view('artikel.AllArtikel', ['blog'=>$blog]);
         }

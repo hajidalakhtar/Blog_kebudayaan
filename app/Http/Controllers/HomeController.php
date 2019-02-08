@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blog = Blog::paginate(6);
+        $blog = Blog::orderBy('id', 'DESC')->paginate(6);
         return view('home',['blog'=>$blog]);
     }
 }

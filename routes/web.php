@@ -61,6 +61,8 @@ Route::get('/tokoh/all','TokohController@allTokoh')->name('tokoh.home.all');
 // Makanan indonesia
 Route::get('/makanan', 'MakananController@home')->name('makanan.home');
 Route::get('/makanan/details/{slug}','MakananController@details')->name('details.makanan');
+Route::get('/makanan/all', 'MakananController@allMakanan')->name('makanan.allMakanan');
+
 
 
 // api
@@ -71,6 +73,8 @@ Route::get('/api/blog', 'BlogController@blogApi');
 Route::get('/api/blog/details/{slug}', 'BlogController@blogApiDetail');
 Route::get('/api/tokoh', 'TokohController@allApi');
 Route::get('/api/tokoh/details/{slug}', 'TokohController@apidetails');
+Route::get('/api/makanan','MakananController@api');
+Route::get('/api/makanan/details/{slug}', 'MakananController@detailsapi');
 
 
 // search

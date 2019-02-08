@@ -11,7 +11,7 @@ class TokohController extends Controller
 
     public function index()
     {
-        $tokoh  = Tokoh::paginate(12);
+        $tokoh  = Tokoh::orderBy('id', 'DESC')->paginate(12);
         return view('tokohindonesia', ['tokoh'=>$tokoh]);
         
     }
@@ -60,7 +60,7 @@ class TokohController extends Controller
     }
     public function allTokoh()
     {
-        $tokoh = Tokoh::paginate(12);
+        $tokoh = Tokoh::orderBy('id', 'DESC')->paginate(12);
         return view('semuatokoh', ['tokoh'=>$tokoh]);
     }
     public function allApi()

@@ -20,6 +20,12 @@
     /api/tokoh
     /api/tokoh/detail/{slug}
 
+  == Makanan Indonesia api ==
+
+    /api/makanan
+    /api/makanan/details/{slug}
+
+
 
 
 

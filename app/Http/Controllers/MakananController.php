@@ -41,7 +41,7 @@ class MakananController extends Controller
     }
     public function home()
     {
-        $makanan = MakananIndonesia::all();
+        $makanan = MakananIndonesia::orderBy('id', 'DESC')->paginate(10);
         return view('makanan.makanan', ['makanan' => $makanan]);
     }
     public function details($slug)
@@ -76,5 +76,20 @@ class MakananController extends Controller
           else return "TIDAK ADA";
         return view('artikel.AllArtikel',  ['blog'=>$makana]);
 
+    }
+    public function api()
+    {
+        $makanan = MakananIndonesia::all();
+        return $makanan;
+    }
+     public function detailsapi($slug)
+    {
+        $makanan = MakananIndonesia::where('slug',$slug)->first();
+        return $makanan;
+    }
+    public function allMakanan()
+    {
+        $makanan = MakananIndonesia::all();
+        return view('admin.makanan.allMakanan', ["makanan"=> $makanan]);
     }
 }

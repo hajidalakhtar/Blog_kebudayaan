@@ -10,6 +10,7 @@
   max-height: 3.6em; 
   line-height: 1.2em;
   text-align:justify;
+  word-spacing:-3px;
 }
 
 .text.ellipsis::after {
@@ -30,10 +31,10 @@
       <img class="d-block w-100" src="https://www.indonesiakaya.com/uploads/_images_home_big_banner/1349-x-450-barapan-kebo---sumbawa-barat-okjpg.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://www.indonesiakaya.com/uploads/_images_home_big_banner/1349-x-450-barapan-kebo---sumbawa-barat-okjpg.jpg" alt="Second slide">
+      <img class="d-block w-100" src="https://www.indonesiakaya.com/uploads/_images_home_big_banner/1349-x-450-gunung-colo---sulawesi-tengah-okjpg.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://www.indonesiakaya.com/uploads/_images_home_big_banner/1349-x-450-barapan-kebo---sumbawa-barat-okjpg.jpg" alt="Third slide">
+      <img class="d-block w-100" src="https://www.indonesiakaya.com/uploads/_images_gallery/cover/soto_gerabah_1290.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
