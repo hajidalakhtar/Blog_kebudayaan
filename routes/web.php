@@ -80,6 +80,7 @@ Route::get('/api/makanan/details/{slug}', 'MakananController@detailsapi');
 // search
 Route::any('/search/artikel','BlogController@search');
 Route::any('/search/tokoh','TokohController@search');
+Route::any('/search/makanan','MakananController@search');
 
 
 Route::get('auth/{provider}', 'AuthController@redirectToProvider');

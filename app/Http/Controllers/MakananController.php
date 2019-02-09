@@ -72,9 +72,9 @@ class MakananController extends Controller
         $search = $request->get('search');
         $makana = MakananIndonesia::where('nama_makanan','like','%'.$search.'%')->paginate(5);
            if(count($makana) > 0)
-            return view('artikel.AllArtikel', ['blog'=>$makana]);
-          else return "TIDAK ADA";
-        return view('artikel.AllArtikel',  ['blog'=>$makana]);
+            return view('admin.makanan.allMakanan', ['makanan'=>$makana]);
+          else 
+        return view('admin.makanan.allMakanan',  ['makanan'=>$makana]);
 
     }
     public function api()
@@ -89,7 +89,8 @@ class MakananController extends Controller
     }
     public function allMakanan()
     {
-        $makanan = MakananIndonesia::all();
+        $makanan = MakananIndonesia::paginate(6);
         return view('admin.makanan.allMakanan', ["makanan"=> $makanan]);
     }
+    
 }

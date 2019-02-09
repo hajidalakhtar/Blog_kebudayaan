@@ -35,7 +35,7 @@
     <h1 class="text-center mt-5">Makanan Indonesia </h1>
     <div class="row  justify-content-center ">
       @foreach ($makanan as $makanans)
-      <div class="col-md-3 mt-5 " >
+      <div class="col-md-4 mt-5 " >
         <div class="card">
             <a href="{{route('details.makanan',$makanans->slug)}}" class=" text-dark">
           <img class="card-img-top" src="/storage/makanan/{{$makanans->foto_makanan}}" alt="" style="width:100%;height:200px;">
@@ -57,7 +57,7 @@
       @endforeach
       
     </div>
-  <p class="text-center">  <a href="{{route('allartikel')}}" class="btn mt-5 text-white" style="background-color:#ceae8a">Baca Selengkap </a></p>
+  <p class="text-center">  <a href="{{route('makanan.allMakanan')}}" class="btn mt-5 text-white" style="background-color:#ceae8a">Baca Selengkap </a></p>
   </div>
 </div>
 @endsection
