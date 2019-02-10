@@ -25,11 +25,15 @@
     <h1 class="text-center mt-5">Makanan Indonesia</h1>
     <div class="row mt-3">
       <div class="col-md-6  col-sm-12">
-        <img src="storage/img/rendang.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4">
+        <img src="storage/img/rendang.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4"  style="border-radius:10px;">
         
       </div>
       <div class="col-md-6 mt-4  col-sm-12">
-        Buat kalian yang suka dengan acara jalan2, pastinya kurang afdol jika kalian ga nyobain makanan khas di tempat yang kalian kunjungi. mungkin dari sekian banyak travelista yang sering jalan2 ada beberapa yang belum tau, mengenal, ataupun mencoba makanan khas dari tempat yang telah di kunjungi. untuk itu saya akan share sedikit pengetahuan tentang makanan khas yang nantinya bisa kalian coba jika kalian berkunjung ke tempat2 wisata di seluruh Indonesia.dan berikut ini 21 Makanan/Masakan Khas dari berbagai daerah di Indonesia:
+        <p class="mt-5">
+          Buat kalian yang suka dengan acara jalan2, pastinya kurang afdol jika kalian ga nyobain makanan khas di tempat yang kalian kunjungi. mungkin dari sekian banyak travelista yang sering jalan2 ada beberapa yang belum tau, mengenal, ataupun mencoba makanan khas dari tempat yang telah di kunjungi. untuk itu saya akan share sedikit pengetahuan tentang makanan khas yang nantinya bisa kalian coba jika kalian berkunjung ke tempat2 wisata di seluruh Indonesia.dan berikut ini 21 Makanan/Masakan Khas dari berbagai daerah di Indonesia:
+
+        </p>
+
       </div>
     </div>
     <h1 class="text-center mt-5">Makanan Indonesia </h1>

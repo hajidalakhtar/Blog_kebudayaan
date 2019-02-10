@@ -54,9 +54,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 <div class="card mt-5">
     <div class="card-body">
-        <h4 class="text-center ">Shorter Url</h4>
+          <h4 class="text-center h1" >{{$tanggal}}</h4>
 
-        <div class="text-center">
+            <div class=" text-center" style=" margin-top:-18px; "> 
             {!! QrCode::size(200)->generate(Request::url()); !!}    
             <p class="text-center"><a href="{{$tokoh->bitly}}" >{{$tokoh->bitly}}</a></p> 
         </div>

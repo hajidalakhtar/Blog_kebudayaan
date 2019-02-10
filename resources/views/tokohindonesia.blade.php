@@ -31,7 +31,7 @@
   <h1 class="text-center">Sejarah Indonesia</h1>
   <div class="row mt-5">
     <div class="col-md-6">
-      <img src="/storage/img/Proklamasi.jpg" alt="" srcset="" width="100%">
+      <img src="/storage/img/Proklamasi.jpg" alt="" srcset="" width="100%"  style="border-radius:10px;">
     </div>
     <div class="col-md-6 ">
       <p style="font-size:16px">Setelah indonesia terbebas dari belanda,indonesia menganggap bahwa jepang penyelamatnya,tetapi sebenarnya jepang malah berniat sm dengan belanda,jepang mulai menjajah rakyat indonesia dengan melakukan kerja paksa. Tetapi demi mengambil simpati rakyat indonesia,jepang membentuk Bpupki dan dilanjut oleh Ppki.Singkat cerita saat jepang kalah melawan sekutu kaum muda memanfaatkan kesempatan ini untuk memproklamasikan kemerdekaan indonesia tetapi kaum tua tidak menginginkannya,soekarno pun tidak setuju jika kemerdekaan dilakukan tanpa sepengetahuan jepang,akhirnya kaum muda mengasingkan ir soekarno diasingkan di rengasdengklok selama beberapa hari dengan tujuan agar ir soekarno tidak terhasut omongan sekutu.Setelah beberapa hari akhirnya ir soekarno setuju dan merekapun pergi kerumah laksamana muda maedah untuk menyusun naskah teks proklamasi lalu membacakannya didepan rumah ir soekarno di jalan pegansaan timur no 56 

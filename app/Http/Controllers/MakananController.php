@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\MakananIndonesia;
 use Illuminate\Support\Str;
 use Bitly;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class MakananController extends Controller
@@ -46,8 +47,9 @@ class MakananController extends Controller
     }
     public function details($slug)
     {
+        $now = Carbon::now()->format('H:i');
         $makanan = MakananIndonesia::where('slug',$slug)->first();
-        return view('makanan.detailsmakanan', ['makanan'=>$makanan]);
+        return view('makanan.detailsmakanan', ['makanan'=>$makanan,'tanggal'=>$now]);
     }
     public function edit($id)
     {

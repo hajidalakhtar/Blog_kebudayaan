@@ -36,8 +36,9 @@
             <div class="col-md-3">
             <div class="card ">
                 <div class="card-body">
-                    <h4>Shorter Url</h4>
-                    <div class="text-center">
+                   <h4 class="text-center h1" >{{$tanggal}}</h4>
+
+            <div class=" text-center" style=" margin-top:-18px; "> 
 
                         {!! QrCode::size(200)->generate(Request::url()); !!}    
                         <p class="text-center"><a href="{{$makanan->bitly}}" >{{$makanan->bitly}}</a></p> 

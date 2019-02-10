@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Blog;
+use Carbon\Carbon;
 use Bitly;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -62,9 +63,12 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
+        
+        $now = Carbon::now()->format('H:i');
+        
         $allBlog = Blog::all()->random(3);
         $blog = Blog::where('slug',$slug)->first();
-        return view('details',['blog' => $blog,'allBlog'=>$allBlog]);
+        return view('details',['blog' => $blog,'allBlog'=>$allBlog,'tanggal'=>$now]);
 }
 
     /**

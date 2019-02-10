@@ -52,7 +52,7 @@
     <h1 class="text-center mt-5">Budaya Indonesia</h1>
     <div class="row mt-3">
       <div class="col-md-6  col-sm-12">
-        <img src="storage/img/Contoh Keragaman Budaya Indonesia.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4">
+        <img src="storage/img/Contoh Keragaman Budaya Indonesia.jpg" alt="" srcset="" width="100%" height='80%' class="mt-4" style="border-radius:10px;">
         
       </div>
       <div class="col-md-6 mt-5  col-sm-12">

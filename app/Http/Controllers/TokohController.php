@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 Use App\Tokoh;
 use Bitly;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -49,9 +50,10 @@ class TokohController extends Controller
     }
     public function show($slug)
     {
+        $now = Carbon::now()->format('H:i');
         $alltokoh = Tokoh::paginate(4);
         $tokoh = Tokoh::where('slug',$slug)->first();
-        return view('detailsTokoh',['tokoh' => $tokoh ,'alltokoh' => $alltokoh]);
+        return view('detailsTokoh',['tokoh' => $tokoh ,'tanggal'=>$now]);
     }
     public function edit($id)
     {
