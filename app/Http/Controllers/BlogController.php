@@ -17,6 +17,7 @@ class BlogController extends Controller
     public function index()
     {
         //
+        
 
         return redirect('admin/home');
     }

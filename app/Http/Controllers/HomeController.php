@@ -19,7 +19,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $name = ['Rahajeng Rauh', 'wilujeung sumping', 'sambutan kanggo','Salamaik datang','selamat datang','seulamat trôh','Salama Engka','Fokha'];
         $blog = Blog::orderBy('id', 'DESC')->paginate(6);
-        return view('home',['blog'=>$blog]);
+        return view('home',['blog'=>$blog,'selamat'=>array_random($name)]);
     }
 }

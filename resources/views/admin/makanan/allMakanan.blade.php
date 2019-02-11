@@ -30,7 +30,7 @@
 <div>
   <div class="container ">
    
-      <h1 class="mt-5 text-center mb-5">Artikel Kebudayaan</h1>
+      <h1 class="mt-5 text-center mb-5">Makanan Indonesia</h1>
        <form class="form-inline my-2 my-lg-0 " method="GET" action="/search/makanan">
           <input class="form-control mr-sm-2" type="search" placeholder="Cari Artikel" name="search" aria-label="Search" style="width:100%">
       </form>

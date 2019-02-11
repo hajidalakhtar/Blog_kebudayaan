@@ -36,6 +36,7 @@ Route::get('/admin/tokoh/create', 'TokohController@create')->name('tokoh.admin.c
 Route::post('/admin/tokoh/store', 'TokohController@store')->name('tokoh.admin.store');
 Route::get('/admin/delete/tokoh/{id}','TokohController@delete')->name('delete.tokoh');
 Route::get('/admin/tokoh/edit/{id}','TokohController@edit')->name('tokoh.edit');
+Route::post('/admin/tokoh/update/{id}','TokohController@update')->name('tokoh.update'); 
 
 //  Admin manakan
 Route::get('/admin/makanan/home','MakananController@index')->name('makanan.admin.home');
@@ -55,6 +56,8 @@ Route::get('/blog/all','BlogController@allData')->name('allartikel');
 Route::get('/tokoh','TokohController@index')->name('tokoh.home'); 
 Route::get('/tokoh/details/{slug}','TokohController@show')->name('details.tokoh');
 Route::get('/tokoh/all','TokohController@allTokoh')->name('tokoh.home.all'); 
+
+
 
 
 

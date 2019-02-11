@@ -13,7 +13,7 @@
             <h1 class="text-center">{{$tokoh->nama_tokoh}}</h1> 
             <br>
 
-       <p class=""> {{$tokoh->riwayat}}</p>
+       <p class=""> {!!$tokoh->riwayat!!}</p>
         </div>    
     </div> 
     <div id="disqus_thread" class="mt-5"></div>

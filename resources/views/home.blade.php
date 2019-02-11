@@ -20,7 +20,7 @@
 }
 
 </style>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+{{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -46,7 +46,27 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div> --}}
+<div class="jumbotron" style="background-image: url('storage/img/Pura_Taman_Ayun_1290.jpg');background-size:cover;padding:0">
+ <div style="background-color:rgba(0,0,0,0.6);">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="text-center pt-5" style="color:red"><span>Budaya</span> <span style="color: white">Indonesia</span> </h1>
+ <h1 class="display-4 text-center  " style="text-shadow: 1px 1px black;color:white;">{{$selamat}}<span class="text-white"> </span></h1>
+<p class="text-white text-center h5 pt-1">Indonesia  Kaya akan budaya </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
+
+</div>
+
 <div>
   <div class="container">
     <h1 class="text-center mt-5">Budaya Indonesia</h1>

@@ -15,7 +15,7 @@
     <div class="card">
         <div class="card-body">
             <h1 class="text-center">Edit Tokoh </h1>
-        <form action="{{route('tokoh.admin.store')}}" method="Post" enctype="multipart/form-data">
+        <form action="{{route('tokoh.update',$tokoh->id)}}" method="Post" enctype="multipart/form-data">
                   @csrf
                 <label for="title">Nama Tokoh</label>
         <input type="text" class="form-control" name="nama_tokoh" value="{{$tokoh->nama_tokoh}}">
