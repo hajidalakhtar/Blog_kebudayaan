@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta name="token" id="token" value="{{ csrf_token() }}"> --}}
-    <link rel="shortcut icon" type="image/png" href="storage/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2a78a615889749.56298364a7e09.png"/>
+
 
 
     <title>Tokoh Indonesia</title>
@@ -137,6 +138,8 @@ ul, ol {
         <main class="">
             @yield('content')
         </main>
+          <link href="https://snatchbot.me/sdk/webchat.css" rel="stylesheet" type="text/css"><script src="https://snatchbot.me/sdk/webchat.min.js"></script><script> Init('?botID=44950&appID=webchat', 400, 500, 'https://dvgpba5hywmpo.cloudfront.net/media/image/MEAq6gibODD4yuuNy8XbjYFuD', '', 'rgba(0, 0, 0, 0)', 50, 50, 35, '', '1', '#FFFFFF', '#FFFFFF', 0); /* for authentication of its users, you can define your userID (add &userID={login}) */ </script>
+
 <br>
 
 <footer class="section footer-classic context-dark bg-image pt-5 mt-5" style="background: #ceae8a;">
