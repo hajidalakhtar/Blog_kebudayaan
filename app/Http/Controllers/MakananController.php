@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\MakananIndonesia;
+use App\Blog;
+use App\Tokoh;
 use Illuminate\Support\Str;
 use Bitly;
 use Carbon\Carbon;
@@ -12,7 +14,10 @@ class MakananController extends Controller
     public function index()
     {
         $maknan = MakananIndonesia::paginate(10);
-        return view('admin.makanan.home', ['makanan'=>$maknan]);
+        $makananCount = MakananIndonesia::count();
+        $blogCount = Blog::count();
+        $tokohCount = Tokoh::count();
+        return view('admin.makanan.home', ['makanan'=>$maknan,'makananCount' => $makananCount,'blogCount'=> $blogCount,'tokohCount'=>$tokohCount]);
         
     }
     public function create()

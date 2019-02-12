@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 Use App\Tokoh;
 use Bitly;
+use App\MakananIndonesia;
+use App\Blog;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -20,7 +22,10 @@ class TokohController extends Controller
     {
 
         $tokoh  = Tokoh::paginate(5);
-        return view('admin.tokoh.home', ['tokoh'=>$tokoh]);
+        $makananCount = MakananIndonesia::count();
+        $blogCount = Blog::count();
+        $tokohCount = Tokoh::count();
+        return view('admin.tokoh.home', ['tokoh'=>$tokoh,'makananCount' => $makananCount,'blogCount'=> $blogCount,'tokohCount'=>$tokohCount]);
 
     }
     public function create()

@@ -46,5 +46,62 @@
             </div>
         </div>
     </div>
+       <div class="row mt-5 justify-content-center">
+        <div class="col-md-4    ">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2a78a615889749.56298364a7e09.png" class="ml-4" alt="" width="110px;">
+                        </div>
+                         <div class="col-md-6 text-center">
+                            <h1 style="font-size:40px;" class="mr-4 ">{{$blogCount}}</h1>
+                            <p class="mr-4  ">Artikels</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+            <div class="col-md-4    ">
+              <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://seeklogo.com/images/S/soekarno-logo-992C701F56-seeklogo.com.png" alt="" width="50px;" class="ml-5">
+                        </div>
+                         <div class="col-md-6 text-center">
+                         <h1 style="font-size:40px;" class="mr-4 ">{{$tokohCount}}</h1>
+                            <p class="mr-4  ">Artikels</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+            <div class="col-md-4    ">
+              <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://pngimage.net/wp-content/uploads/2018/06/nasi-uduk-png.png" alt="" width="110px;" class="ml-4">
+                        </div>
+                         <div class="col-md-6 text-center">
+                            <h1 style="font-size:40px;" class="mr-4 ">{{$makananCount}}</h1>
+                            <p class="mr-4  ">Artikels</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
 </div>
 @endsection
