@@ -13,9 +13,12 @@
   <div class="card">
         <div class="card-body">
             <h1 class="text-center">{{$blog->title}}</h1> 
+
             <br>
 
        <p class="text-center"> {!!$blog->isi!!}</p>
+             <p class="text-right pt-4"><a href="/download/pdf/{{$blog->slug}}" class="text-right">Download Artikel</a></p>
+
         </div>    
     </div> 
     <div id="disqus_thread" class="mt-5"></div>
@@ -52,13 +55,14 @@ s.setAttribute('data-timestamp', +new Date());
 
             <div class=" text-center" style=" margin-top:-18px; "> {!! QrCode::size(200)->generate(Request::url()); !!}  </div>  
       <p class="text-center"><a href="{{$blog->bitly}}" >{{$blog->bitly}}</a></p> 
+   
 
     </div>
 </div>
 <div class="card mt-5">
     <div class="card-body">
+        <h4 class="text-center pb-1">Random Artikel</h4>
    <div class="row ">
-           <h4 class="">Random Artikel</h4>
         @foreach ($allBlog as $allBlog)
         <a href="{{route('details',$allBlog->slug)}}">
            <div class="card">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use Carbon\Carbon;
 use Bitly;
+use PDF;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -143,6 +144,15 @@ class BlogController extends Controller
         return view('artikel.AllArtikel', ['blog'=>$blog]);
         else 
         return view('tidakada',['data'=>$tidakada]);
+    }
+    public function downloadPDF($slug)
+    {
+        $blog = Blog::where('slug',$slug)->first();
+        // dd($blog);
+        $pdf = PDF::loadView('admin.pdf',['blog'=>$blog]);
+        // return view('admin.pdf')->with('blog',$blog);
+        return $pdf->download($blog->slug);
+
     }
     
    

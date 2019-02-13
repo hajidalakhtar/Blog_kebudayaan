@@ -86,6 +86,11 @@ Route::any('/search/tokoh','TokohController@search');
 Route::any('/search/makanan','MakananController@search');
 
 
+// PDF
+Route::get('/download/pdf/{slug}','BlogController@downloadPDF');
+
+
+// Auth Google
 Route::get('auth/{provider}', 'AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'AuthController@handleProviderCallback');
 

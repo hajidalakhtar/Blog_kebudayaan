@@ -38,7 +38,7 @@
       @foreach ($makanan as $data)
       <div class="col-md-4 mt-4 " >
         <div class="card">
-            <a href="{{route('details',$data->slug)}}" class=" text-dark">
+            <a href="{{route('details.makanan',$data->slug)}}" class=" text-dark">
           <img class="card-img-top" src="/storage/makanan/{{$data->foto_makanan}}" alt="" style="width:100%;height:200px;">
          </a>
           <div class="card-head">
